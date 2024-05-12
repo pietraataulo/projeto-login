@@ -15,8 +15,9 @@
 
 body, html {
     background-color: #5f2c82;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
+    position: fixed;
 }
 
 main {
@@ -30,12 +31,15 @@ section#login {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow: hidden;
+    overflow: hidden; /* imagem sem borda quadrada */
     background-color: white;
     width: 250px;
     height: 500px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.592);
+
+    transition: width 0.3s, height 0.3s; /* transição quando aumenta e diminui a tela */
+    transition-timing-function: ease; /* suavizar a transição */
 }
 
 section#login > div#imagem {
@@ -51,3 +55,13 @@ section#login > div#formulario {
     padding: 10px;
     display: block;
 }
+
+div#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p {
+    font-size: 0.8em;
+}
+
